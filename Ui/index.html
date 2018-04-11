@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" >
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+<div id="fullscreen_bg" class="fullscreen_bg"/>
+
+<div class="container">
+
+
+
+	<form class="form-signin">
+		<h1 class="form-signin-heading text-muted">Sign In</h1>
+		<input type="text" class="form-control" placeholder="Email address" required="" autofocus="" id="username">
+		<input type="password" class="form-control" placeholder="Password" required="" id="password">
+		<button class="btn btn-lg btn-primary btn-block" type="button" onClick="	
+			var username = document.getElementById('username');
+			var password = document.getElementById('password');
+			var xmlhttp = new XMLHttpRequest();
+			var url = 'http://10.151.60.46:8204/registration-service/login';
+			xmlhttp.open('POST', url, true);
+			xmlhttp.setRequestHeader('authorization',localStorage.getItem('Token'));
+			xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			//sending the http-request
+			xmlhttp.send('userId='+username'&password='+password);
+
+			xmlhttp.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					// add token to local storage and show success login
+					window.location='http://localhost:8080/final.html';
+				} else{
+					alert('Invalid Credentials');
+				}
+			}	
+		">	Sign In </button>
+	</form>
+</div>
+</body>
+</html>

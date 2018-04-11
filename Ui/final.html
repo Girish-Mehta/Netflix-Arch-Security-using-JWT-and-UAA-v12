@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+<body>
+<div id="fullscreen_bg" class="fullscreen_bg"/>
+<div class="container text-center">
+<div class="row">
+<span class="col-6">
+	<button type="button" class="btn btn-primary" onClick="
+<!-- 
+ 		var xmlhttp = new XMLHttpRequest();
+		var url = 'http://10.151.60.206:8204/hello-service/user/';
+		console.log(url);
+		xmlhttp.open('GET', url, true);
+		xmlhttp.setRequestHeader('authorization','adasdasdasdasasddasd');
+ 		//sending the http-request
+		xmlhttp.send();
+
+		xmlhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 202) {
+				// redirect to user page
+			} else{
+				// redirect to login page
+				window.location='http://localhost:8080/index.html';
+				}
+		}
+	
+		$http({method: 'GET', url: 'http://10.151.60.206:8204/hello-service/user/', headers: {
+  			'access-control-request-headers': 'adasdasdasdasasddasd'}
+		});
+
+		$.ajax({ 
+		   type : 'GET', 
+		   url : 'http://10.151.60.206:8204/hello-service/user/', 
+		   beforeSend: function(xhr){xhr.setRequestHeader('access-control-request-headers', 'asdhaskdhasuidas87dsa');},
+		   success : function(result) { 
+		       //set your variable to the result 
+		       alert('Success');
+		   }, 
+		   error : function(result) { 
+		     //handle the error 
+		     alert('Failed');
+		   } 
+		 });
+	
+-->
+
+ 		var xmlhttp = new XMLHttpRequest();
+		var url = 'http://10.151.60.206:8204/hello-service/user/';
+		console.log(url);
+		xmlhttp.open('GET', url, true);
+		xmlhttp.setRequestHeader('authorization','adasdasdasdasasddasd');
+ 		//sending the http-request
+		xmlhttp.send();
+
+		xmlhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 202) {
+				// redirect to user page
+				alert('welcome user');
+			} else{
+				alert('redirecting');
+				// redirect to login page
+				<!-- window.location='http://localhost:8080/index.html'; -->
+				}
+		}
+
+		">
+	User Profile</button>
+	<button type="button" class="btn btn-primary" onClick="
+		var xmlhttp = new XMLHttpRequest();
+		var url = 'http://10.151.60.206:8204/hello-service/user/';
+		console.log(url);
+		xmlhttp.open('GET', url, true);
+		xmlhttp.setRequestHeader('authorization','tokengeneratedforguest';
+		<!-- xmlhttp.setRequestHeader('authorization',localStorage.getItem('Token')); -->
+		//sending the http-request
+		xmlhttp.send();
+
+		xmlhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 401) {
+				// redirect to login page
+				window.location='http://localhost:8080/index.html';
+			} else{
+
+				// redirect to login page
+				window.location='http://localhost:8080/index.html';
+			}
+		}">
+	Login</button>
+</span>
+	<span class="col-6">
+	<button type="button" class="btn btn-primary">Sign Out</button>
+</span>
+<div class="col-12">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title" style="color:white;margin-left:30px; font-size: 20px;">    	
+    </style>Welcome user</h5>
+    <p class="card-text text-white" style="color:white;margin-left:30px; font-size: 20px;">With supporting text below as a natural lead-in to additional content.</p>
+  </div>
+</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
